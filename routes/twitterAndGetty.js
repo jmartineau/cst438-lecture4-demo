@@ -2,6 +2,10 @@ var async = require('async');
 var express = require('express');
 var router = express.Router();
 var btoa = require('btoa');
+<<<<<<< HEAD
+=======
+var https = require('https'); 
+>>>>>>> c6ef069c54cdf69a55f5cef2c578b0335af9e414
 
 
 
@@ -15,7 +19,11 @@ const options = {
     }
 }; 
 
+<<<<<<< HEAD
 function makeApiRequest(sendBackResponseToBrowser) {
+=======
+function makeGettyApiRequest(sendBackResponseToBrowser) {
+>>>>>>> c6ef069c54cdf69a55f5cef2c578b0335af9e414
     var apiResponse = ''; 
     
     https.get(options, function(response){
@@ -159,8 +167,8 @@ function doAllTwitterRequests(callback) {
 
 router.get('/', function(req, res, next) {
     async.parallel([
-        twitterAPI.doAllTwitterRequests,
-        gettyAPI.makeApiRequest
+        doAllTwitterRequests,
+        makeGettyApiRequest
     ],
     // optional callback
     function(err, results) {

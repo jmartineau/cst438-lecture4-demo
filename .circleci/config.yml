@@ -1,7 +1,7 @@
 version: 2
 jobs:
    build:
-     working_directory: ~/cst438-lecture4-demo
+     working_directory: ~/lecture10
      docker:
        - image: circleci/node:4.8.2
      steps:
